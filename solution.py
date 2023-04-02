@@ -6,9 +6,7 @@ chat_id = 485082255 # Ваш chat ID, не меняйте название пе�
 
 def solution(x: np.array) -> float:
     
-    loc = np.median(x)
-    scale = np.mean(np.abs(x - loc))
-    
-    acceleration = 2 / (scale ** 2)
-    
-    return acceleration
+    n = len(x)
+    a = (1/n) * np.sum(x / (1.5 ** 2))
+    return a
+
